@@ -1,0 +1,74 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Design system colors */
+    --dark-bg: #1C1C1C;
+    --chat-input-bg: #272725;
+    --chat-border: #595858;
+    --preview-bg: #D9D9D9;
+    --yellow-btn: #F6D40E;
+    --blue-btn: #1E52F1;
+    --text-light: #D9D9D9;
+    --text-muted: #D3C7C7;
+    --divider: #3B3B3B;
+    
+    /* Tailwind CSS theme */
+    --background: 0 0% 11%;
+    --foreground: 0 0% 85%;
+
+    --card: 0 0% 11%;
+    --card-foreground: 0 0% 85%;
+
+    --popover: 0 0% 11%;
+    --popover-foreground: 0 0% 85%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#1C1C1C] text-foreground;
+    font-family: 'Inter', -apple-system, Roboto, Helvetica, sans-serif;
+  }
+
+  :where(p, span, li, h1, h2, h3, h4, h5, h6, a, button, label, td, th) {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  pre,
+  code {
+    overflow-x: auto;
+    white-space: pre;
+  }
+}
